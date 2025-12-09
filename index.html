@@ -18,33 +18,30 @@
         color: white;
     }
 
-    /* Container for the entire box + text */
     .giveaway-container {
         text-decoration: none;
         display: inline-block;
         text-align: center;
     }
 
-    /* The gift box wrapper */
+    /* Gift box container */
     .gift-box {
         width: 260px;
         aspect-ratio: 1;
-        background-image: url('https://png.pngtree.com/png-vector/20240203/ourmid/pngtree-d-vector-cartoon-gift-box-3d-icon-png-image_11510971.png');
+        background-image: url('https://i.imgur.com/9CqVq34.png'); /* reliable image host */
         background-size: cover;
         background-position: center;
         position: relative;
         cursor: pointer;
 
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        /* SHAKE animation */
         animation: shake 1.5s infinite ease-in-out;
     }
 
-    /* SHAKE KEYFRAMES */
+    /* Shake */
     @keyframes shake {
         0% { transform: rotate(0); }
         25% { transform: rotate(1.5deg); }
@@ -53,13 +50,13 @@
         100% { transform: rotate(0); }
     }
 
-    /* OPEN ON HOVER (slight lift + scale) */
+    /* Hover open */
     .gift-box:hover {
         transform: scale(1.06) translateY(-4px);
         transition: 0.25s ease;
     }
 
-    /* Perfect centered text inside the box */
+    /* Centered text */
     .box-text {
         position: absolute;
         top: 50%;
@@ -67,45 +64,33 @@
         width: 90%;
         transform: translate(-50%, -50%);
         text-align: center;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
         font-weight: bold;
         line-height: 1.2;
     }
 
     .big-title {
         font-size: 26px;
-        text-shadow: 0px 0px 12px black;
+        text-shadow: 0 0 12px black;
         color: white;
-        margin-bottom: 6px;
     }
 
     .small-title {
         font-size: 14px;
-        text-shadow: 0px 0px 10px black;
-        margin-top: 4px;
+        margin-top: 6px;
         color: #ffe9a6;
+        text-shadow: 0 0 10px black;
     }
-
 </style>
 </head>
 <body>
 
 <a class="giveaway-container" href="https://www.facebook.com/share/p/1F7txtMfav/" target="_blank">
-
     <div class="gift-box">
-
         <div class="box-text">
             <div class="big-title">GIVEAWAY</div>
             <div class="small-title">Ends Dec 10 @ 11PM MST</div>
         </div>
-
     </div>
-
 </a>
 
 </body>
