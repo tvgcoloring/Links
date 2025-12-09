@@ -30,8 +30,9 @@
     .container h1 {
         margin-bottom: 25px;
         font-size: 2em;
-        color: #FFFF00; /* neon yellow for title */
-        text-shadow: 0 0 10px #FFFF00; /* glowing effect for text */
+        color: #FFFF00; /* neon yellow title */
+        text-shadow: 0 0 5px black, 0 0 10px #FFFF00, 0 0 20px #FFFF00; /* black border + glow */
+        animation: titlePulse 2s infinite alternate;
         word-wrap: break-word;
     }
 
@@ -47,7 +48,7 @@
         border-radius: 12px;
         font-weight: bold;
         transition: transform 0.2s, background 0.2s, box-shadow 0.3s;
-        box-shadow: 0 0 10px rgba(255,255,0,0.5);
+        box-shadow: 0 0 10px rgba(255,255,0,0.5), 0 0 0 1px black; /* add subtle black border */
         animation: neonPulse 2s infinite alternate;
         font-size: 1.1em;
     }
@@ -59,37 +60,17 @@
 
     @keyframes neonPulse {
         0% {
-            box-shadow: 0 0 5px #FFFF00, 0 0 10px #FFFF00, 0 0 20px #FFFF00;
+            box-shadow: 0 0 5px #FFFF00, 0 0 10px #FFFF00, 0 0 20px #FFFF00, 0 0 0 1px black;
         }
         50% {
-            box-shadow: 0 0 15px #FFFF00, 0 0 25px #FFFF00, 0 0 35px #FFFF00;
+            box-shadow: 0 0 15px #FFFF00, 0 0 25px #FFFF00, 0 0 35px #FFFF00, 0 0 0 1px black;
         }
         100% {
-            box-shadow: 0 0 10px #FFFF00, 0 0 20px #FFFF00, 0 0 30px #FFFF00;
+            box-shadow: 0 0 10px #FFFF00, 0 0 20px #FFFF00, 0 0 30px #FFFF00, 0 0 0 1px black;
         }
     }
 
-    /* Mobile adjustments */
-    @media (max-width: 480px) {
-        .container h1 {
-            font-size: 1.6em;
+    @keyframes titlePulse {
+        0% {
+            text-shadow: 0 0 5px black, 0 0 10px #FFFF00, 0 0 20px #FFFF00;
         }
-        .link-button {
-            padding: 12px 0;
-            font-size: 1em;
-        }
-    }
-</style>
-</head>
-<body>
-<div class="container">
-    <h1>TVG Coloring</h1>
-    <a class="link-button" href="mailto:tvgcoloring@gmail.com">Email</a>
-    <a class="link-button" href="https://www.facebook.com/share/1Aswm2iKXY/" target="_blank">Facebook</a>
-    <a class="link-button" href="https://www.instagram.com/tvg.coloring?igsh=b2E3bGQ2OGc1d29q" target="_blank">Instagram</a>
-    <a class="link-button" href="https://www.tiktok.com/@tvgcolor?_r=1&_t=ZP-924QigSFdEM" target="_blank">TikTok</a>
-    <a class="link-button" href="https://www.etsy.com/shop/TVGcolor" target="_blank">Etsy</a>
-    <a class="link-button" href="https://www.amazon.com/stores/author/B0FJM9XYGY?ccs_id=2d534d53-6a10-4c5f-ba37-ee6fc1654a11" target="_blank">Amazon Author</a>
-</div>
-</body>
-</html>
