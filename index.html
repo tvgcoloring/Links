@@ -8,7 +8,7 @@
 /* Global body styling */
 body {
     background-color: #0a0a0a;
-    background: url('background.png') no-repeat center center fixed;
+    background: url('background.png') no-repeat center center;
     background-size: cover;
     color: #fff;
     font-family: Arial, sans-serif;
@@ -136,7 +136,7 @@ h1 {
 }
 
 /* Mobile adjustments */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     h1, .info-text {
         -webkit-text-stroke: 0;
         text-shadow:
@@ -151,10 +151,10 @@ h1 {
         font-size: clamp(0.9em, 4vw, 1em);
     }
 
-    /* Background optimization for mobile */
     body {
-        background-size: cover;
+        background-attachment: scroll; /* fix for mobile */
         background-position: center top;
+        background-size: cover;
     }
 }
 </style>
