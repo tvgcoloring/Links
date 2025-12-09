@@ -51,7 +51,7 @@ body::before {
 /* Neon heading with black outline */
 h1 {
     color: #FF6F00;
-    font-size: 2.5em;
+    font-size: 3em; /* slightly larger */
     font-weight: bold;
     text-transform: uppercase;
     -webkit-text-stroke: 1.5px #000;
@@ -61,17 +61,7 @@ h1 {
         0 0 20px #FF6F00,
         0 0 40px #FF6F00;
     animation: neonPulse 1.5s infinite alternate;
-    margin-bottom: 10px;
-}
-
-/* Additional info texts */
-.info-text {
-    font-size: 1.2em;
-    margin: 8px 0;
-    color: #FFD580;
-    text-shadow:
-        0 0 3px #000,
-        0 0 5px #FFB800;
+    margin-bottom: 20px;
 }
 
 /* Neon buttons / boxes with slight transparency */
@@ -133,6 +123,18 @@ h1 {
     }
 }
 
+/* Info text below buttons with neon style */
+.info-text {
+    color: #FF6F00;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 12px 0 0 0;
+    -webkit-text-stroke: 1px #000;
+    text-shadow:
+        0 0 5px #000,
+        0 0 10px #FF6F00;
+}
+
 /* Subtle mouse-following glow effect on background splats */
 body::after {
     content: '';
@@ -149,7 +151,7 @@ body::after {
 /* Mobile adjustments */
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.8em;
+        font-size: 2em;
     }
     .link-button {
         padding: 12px 0;
@@ -176,8 +178,6 @@ body::after {
 <body>
 <div class="container">
     <h1>TVG Coloring</h1>
-    <div class="info-text">Don't forget to follow to stay up to date on new products and giveaways!</div>
-    <div class="info-text">Reach out if you are looking for something custom!</div>
 
     <a class="link-button" href="mailto:tvgcoloring@gmail.com">
         <svg viewBox="0 0 512 512"><path d="M502.3 190.8L327.4 365.6c-16 16-41.9 16-57.9 0L9.7 190.8c-6.2-6.2-1.8-16.8 7.1-16.8h478.4c9 0 13.3 10.6 7.1 16.8z"/></svg>
@@ -200,7 +200,7 @@ body::after {
     </a>
 
     <a class="link-button" href="https://www.etsy.com/shop/TVGcolor" target="_blank">
-        <svg viewBox="0 0 448 512"><path d="M448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80C0 53.5 21.5 32 48 32h352c26.5 0 48 21.5 48 48zM224 152c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"/></svg>
+        <svg viewBox="0 0 576 512"><path d="M528 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM288 144c48.5 0 88 39.5 88 88s-39.5 88-88 88-88-39.5-88-88 39.5-88 88-88z"/></svg>
         Etsy
     </a>
 
@@ -208,6 +208,10 @@ body::after {
         <svg viewBox="0 0 512 512"><path d="M502.7 192.2l-23.6 138.4c-1.9 11.2-11.6 19.5-22.9 19.5h-22.3v16.7c0 8.3-6.7 15-15 15H115.1c-8.3 0-15-6.7-15-15v-16.7H77.8c-11.3 0-21-8.3-22.9-19.5L31.3 192.2c-3.4-20.1 12.9-37.9 33.4-37.9h404c20.5 0 36.7 17.8 33.4 37.9z"/></svg>
         Amazon Author
     </a>
+
+    <!-- Info text below all buttons -->
+    <div class="info-text">Follow to stay updated on new products/giveaways!</div>
+    <div class="info-text">Looking for something custom? Reach out on any platform!</div>
 </div>
 
 <script>
